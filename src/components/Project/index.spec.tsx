@@ -41,7 +41,7 @@ describe('Project', () => {
     })
   })
 
-  it('should wrap the text and pass to title when it has more than 120 characters', () => {
+  it('should wrap the description and pass to title when it has more than 120 characters', () => {
     const description =
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat quae assumenda odit amet quod qui quo iste voluptatibus corporis'
 
@@ -52,5 +52,16 @@ describe('Project', () => {
     ).toBeInTheDocument()
 
     expect(screen.getByTitle(description)).toBeInTheDocument()
+  })
+
+  it('should wrap the title and pass to title attribute when it has more than 120 characters', () => {
+    const title =
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat quae assumenda odit amet quod qui quo iste voluptatibus corporis'
+
+    render(<Project {...projectprops} title={title} />)
+
+    expect(screen.getByText(`${title.slice(0, 30)}...`)).toBeInTheDocument()
+
+    expect(screen.getByTitle(title)).toBeInTheDocument()
   })
 })

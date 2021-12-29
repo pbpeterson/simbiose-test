@@ -47,8 +47,39 @@ export const Wrapper = styled.section`
   .slick-next.slick-disabled {
     visibility: hidden;
   }
+
+  li.slick-active button {
+    background: #a0aec0;
+  }
+
   max-width: 110rem;
   padding: 0 1rem;
+`
+
+export const Dots = styled.ul`
+  padding: 0 1rem;
+  margin-top: 2rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+  max-width: 12rem;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  text-align: center;
+
+  button {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0.5rem;
+    border: 0;
+    text-indent: -100rem;
+    overflow: hidden;
+  }
 `
 
 export const Title = styled.h2`

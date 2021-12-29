@@ -17,6 +17,7 @@ const HomeTemplate = ({ projects }: HomeTemplateProps) => {
     nextArrow: <ArrowRight aria-label="next projects" />,
     prevArrow: <ArrowLeft aria-label="previous projects" />,
     dots: true,
+    appendDots: (dots) => <S.Dots>{dots}</S.Dots>,
     responsive: [
       {
         breakpoint: 1375,

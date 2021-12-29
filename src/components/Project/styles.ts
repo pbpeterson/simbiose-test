@@ -37,6 +37,7 @@ export const City = styled.p`
 export const Description = styled.p`
   margin: 1rem 0 0 0;
   color: #73787d;
+  min-height: 6rem;
 `
 
 export const InfoMoneyWrapper = styled.div`
