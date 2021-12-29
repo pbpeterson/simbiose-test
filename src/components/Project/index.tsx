@@ -31,12 +31,15 @@ const Project = ({
   return (
     <S.Wrapper>
       <S.Rounet>ROUANET</S.Rounet>
-      <S.Title>{title}</S.Title>
+      <S.Title title={title.length > 30 ? title : ''}>
+        {title.slice(0, 30)}
+        {title.length > 30 && '...'}
+      </S.Title>
       <S.City>
         {city}
         <span>{uf}</span>
       </S.City>
-      <S.Description title={description}>
+      <S.Description title={description.length > 120 ? description : ''}>
         {description.slice(0, 120)}
         {description.length > 120 && '...'}
       </S.Description>

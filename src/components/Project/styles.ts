@@ -19,6 +19,7 @@ export const Rounet = styled.h3`
 
 export const Title = styled.h4`
   margin: 1rem 0;
+  height: 2rem;
 `
 
 export const City = styled.p`
